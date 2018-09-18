@@ -51,7 +51,7 @@ class user:
             self.db.execute("SELECT * FROM user LIMIT 1")
         except sqlite3.OperationalError:
             self.db.execute(
-                "CREATE TABLE user (hostname TEXT UNIQUE, nickname TEXT, server TEXT, level INT, activity INT)")
+                "CREATE TABLE user (hostname TEXT UNIQUE, nickname TEXT, level INT, activity INT)")
             self.dbconn.commit()
 
     def setup(self, ident=""):
