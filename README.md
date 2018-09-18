@@ -36,6 +36,10 @@ You can add bot commands by adding python files to the
 `plugins` folder. See `example.py` in that folder for an
 example.
 
+The admin command `!reload` (one of the only commands
+available by default) reloads plugins and can be used to
+add commands while the bot is running.
+
 ## User levels
 People are assigned user levels by the bot. Everyone has the
 level `LEVEL_USER` by default. There are two other levels 
