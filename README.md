@@ -21,7 +21,7 @@ are self-explanatory, but these may need some details:
 
 - `nickserv_curse`: If a NOTICE containing this phrase is 
   received from a user with the name `NickServ` and a user
-  level (see below) of `LEVEL_ADMIN`, the bot will try to
+  level (see below) of `LEVEL_SERVICE`, the bot will try to
   identify itself if a password is known.
 - `nickserv_magic`: If a phrase containing this phrase is
   received from the same NickServ, this will be interpreted
