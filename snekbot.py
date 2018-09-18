@@ -148,7 +148,6 @@ class snekbot(irc_client):
         if sender.nickname == "NickServ":
             if config.nickserv_curse in msg:
                 if config.nickserv_password != "" and self.nickname == config.nickserv_nickname:  # logon
-                    print("Hi, my name is")
                     self.sendCmd("PRIVMSG NickServ :IDENTIFY %s" % config.nickserv_password)
             elif config.nickserv_magic in msg:
                 # we're logged in

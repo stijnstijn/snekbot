@@ -73,7 +73,6 @@ class user:
             dbuser = self.db.execute("SELECT * FROM user WHERE hostname = ?", (self.hostname,)).fetchone()
 
             if not dbuser:
-                self.debug("User does not exist yet, inserting...")
                 self.db.execute("INSERT INTO user (nickname, hostname, level) VALUES (?, ?, ?)",
                                 (self.nickname, self.hostname, self.LEVEL_USER))
                 self.dbconn.commit()
@@ -169,4 +168,4 @@ class user:
 
         :param msg:  Message to log
         """
-        print("USR %s" % msg)
+        print("[" + str("USER").rjust(14) + "] %s" % msg)
