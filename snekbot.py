@@ -144,8 +144,7 @@ class snekbot(irc_client):
         :param sender:  Who sent the message (user object)
         :return:
         """
-        # if sender.level == user.LEVEL_SERVICE and sender.nickname == "NickServ":
-        if sender.nickname == "NickServ":
+        if sender.nickname == "NickServ" and sender.level == sender.LEVEL_SERVICE:
             if config.nickserv_curse in msg:
                 if config.nickserv_password != "" and self.nickname == config.nickserv_nickname:  # logon
                     self.sendCmd("PRIVMSG NickServ :IDENTIFY %s" % config.nickserv_password)
